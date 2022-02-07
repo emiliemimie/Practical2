@@ -10,3 +10,24 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Testing text features
 
 For example, __bold letterings__ and plain text.
+
+# Data
+
+Now that the rep in Github is setup, we can have a look at the penguins dataset.
+
+```{r}
+# Load dataset
+library(palmerpenguins)
+data(package = 'palmerpenguins')
+```
+
+Let's see if there is a difference in body mass between sexes...
+
+```{r}
+# Creating a graph
+boxplot(body_mass_g ~ sex, data = penguins, na.rm=TRUE)
+```
+
+
+
+
